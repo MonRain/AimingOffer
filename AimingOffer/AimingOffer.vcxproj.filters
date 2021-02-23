@@ -13,16 +13,25 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\DataStructure">
+      <UniqueIdentifier>{6ce80b8a-ef64-4910-984e-8a375a3178c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="solution3.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="utils.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="solution3.cpp">
+      <Filter>源文件\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="solution4.cpp">
+      <Filter>源文件\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="solution5.cpp">
+      <Filter>源文件\DataStructure</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

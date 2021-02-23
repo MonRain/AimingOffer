@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="solution3.cpp" />
+    <ClCompile Include="solution4.cpp" />
+    <ClCompile Include="solution5.cpp" />
     <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -18,5 +18,12 @@ bool solution3(int arr[], int arr_len, int* ans);
 bool solution3ex(int arr[], int arr_len, int* ans);
 bool duplicate(int numbers[], int length, int* duplication);
 
+// solution4
+bool solution4(int* arr, int col, int row, int value);
+
+// solution5
+void ifSame(); 
+char* solution5(char* str, int length)
+
 // utils
 void printArr(int arr[], int num_arr);
