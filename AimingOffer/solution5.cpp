@@ -37,8 +37,8 @@ void ifSame() {
 *	输出"We%20are%20happy."	
 */
 
-char* solution5(char* str, int length) {
-	if (str == nullptr || length <= 0)
+char* solution5(char str[]) {
+	if (str == nullptr)
 		return nullptr;
 
 
@@ -58,22 +58,39 @@ char* solution5(char* str, int length) {
 	* 契合参考答案
 	*/
 
-	int num_blank = 0;
-	char* p_end;//记录原来的的字符串结尾
-	char* p_new_end;//记录扩展后字符串结尾
-
+	//第一件事：计算字符串长度
+	int length = 0;
+	while (str[length] != '\0')
+	{
+		length++;  
+	}
+	int n_blank = 0;
 	for (int i = 0; i < length; i++) {
-		if (str[i] == ' ') {
-			num_blank++;
-		}
+		if (str[i] == ' ')
+			n_blank++;
 	}
 
-	p_end = str + (length+1) * 2;
-	p_new_end = p_end + 2 * num_blank;
+	int idx_end = length;// 这里不提-1 是为了把\0也参与到后移操作中。
+	int idx_new_end = idx_end + n_blank * 2;// 每完成一次替换（' '替换成'%20'）长度增加2个单位
 
+	//char new_str[] = new char[idx_new_end];
+	while (idx_end >= 0 && idx_new_end > idx_end) {
+		if (str[idx_end] != ' ') {
+			str[idx_new_end--] = str[idx_end-1];
+		}
+		else {
+			//str[idx_new_end] = '%20'; 这样会导致发生转义 对于%2
+			str[idx_new_end--] = '0';
+			str[idx_new_end--] = '2';
+			str[idx_new_end--] = '%';
+		}
+		idx_end--;
+	}
 
+	return str;
 	//总结：C语言中 字符串后边都有一个'\0'结束符
 }
 
 // 反思：善于用while循环
 
+// 功能已经实现，但会造成栈溢出，对于开了溢出检测的运行环境会引发异常

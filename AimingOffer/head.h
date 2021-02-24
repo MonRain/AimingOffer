@@ -23,7 +23,7 @@ bool solution4(int* arr, int col, int row, int value);
 
 // solution5
 void ifSame(); 
-char* solution5(char* str, int length)
+char* solution5(char str[]);
 
 // utils
 void printArr(int arr[], int num_arr);
