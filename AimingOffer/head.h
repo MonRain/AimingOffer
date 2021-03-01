@@ -26,6 +26,14 @@ void ifSame();
 char* solution5(char str[]);
 
 // solution6
+// ÃüÃûÏ°¹ß
+//Non - public, non - static field names start with m.
+//
+//Static field names start with s.
+//
+//Other fields start with a lower case letter.
+//
+//Public static final fields(constants) are ALL_CAPS_WITH_UNDERSCORES.
 struct ListNode
 {
 	int m_nValue;
@@ -37,5 +45,14 @@ void printList(ListNode** pHead);
 void printListRevStack(ListNode**);
 void printListRevRecursively(ListNode**);
 void findDelNode(ListNode** pHead, int value);
+
+// solution7
+struct BinTreeNode
+{
+	BinTreeNode* m_pLeft;
+	BinTreeNode* m_pRight;
+
+	int m_nValue;
+};
 // utils
 void printArr(int arr[], int num_arr);

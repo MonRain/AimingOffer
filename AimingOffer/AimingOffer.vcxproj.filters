@@ -16,6 +16,9 @@
     <Filter Include="源文件\DataStructure">
       <UniqueIdentifier>{6ce80b8a-ef64-4910-984e-8a375a3178c6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Algorithm">
+      <UniqueIdentifier>{a8d921bc-df5e-4183-84f9-ee3da26143a4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -34,6 +37,9 @@
       <Filter>源文件\DataStructure</Filter>
     </ClCompile>
     <ClCompile Include="solution6.cpp">
+      <Filter>源文件\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="solution7.cpp">
       <Filter>源文件\DataStructure</Filter>
     </ClCompile>
   </ItemGroup>
