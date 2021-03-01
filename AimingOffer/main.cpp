@@ -4,31 +4,21 @@
 
 #include "head.h"
 
-//bool solution3(int arr[],int arr_len,int* ans);
 
 using namespace std;
 int main(int args, char* argv) {
-	char str1[] = "hello new world!";
-	char str2[] = "hello_new_world!";
-	char* str11 = solution5(str1);
-	char* str22 = solution5(str2);
-
+	ListNode* pHead = new ListNode();
 	int i = 0;
-
-	cout << "blank: ";
-	while (str11[i] != '\0') {
-		cout << str11[i];
-		i++;
+	int value;
+	while (i<5) {
+		addToTail(&pHead, ++i);
 	}
-	cout << endl;
 
-	cout << "no blank: ";
-	i = 0;
-	while (str22[i] != '\0') {
-		cout << str22[i];
-		i++;
-	}
-	cout << endl;
+	printList(&pHead);
+
+	findDelNode(&pHead, 1);
+	findDelNode(&pHead, 2);
+	printList(&pHead);
 
 	return 0;
 }

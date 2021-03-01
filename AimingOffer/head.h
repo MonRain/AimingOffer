@@ -25,5 +25,17 @@ bool solution4(int* arr, int col, int row, int value);
 void ifSame(); 
 char* solution5(char str[]);
 
+// solution6
+struct ListNode
+{
+	int m_nValue;
+	ListNode* m_pNext;
+};
+void addToTail(ListNode** pHead, int value);
+void getTail(ListNode**, int*);
+void printList(ListNode** pHead);
+void printListRevStack(ListNode**);
+void printListRevRecursively(ListNode**);
+void findDelNode(ListNode** pHead, int value);
 // utils
 void printArr(int arr[], int num_arr);
