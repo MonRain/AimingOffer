@@ -1,5 +1,6 @@
 #pragma once
-
+#include <vector>
+#include <string>
 //// solution1
 /*
 * 题目：为如下CMyString类型的生命，添加赋值运算符函数
@@ -12,7 +13,7 @@
 //private:
 //	char* m_pData;
 //};
-
+using namespace std;
 // solution3
 bool solution3(int arr[], int arr_len, int* ans);
 bool solution3ex(int arr[], int arr_len, int* ans);
@@ -54,5 +55,8 @@ struct BinTreeNode
 
 	int m_nValue;
 };
+BinTreeNode* reBuildBinTree(int forward[], int middle[], int length);
+std::vector<int>* preOrderRecursion(BinTreeNode* pHead, std::vector<int>* vec);
+vector<vector<string>> printTree(BinTreeNode* root);
 // utils
 void printArr(int arr[], int num_arr);
