@@ -19,6 +19,18 @@
     <Filter Include="源文件\Algorithm">
       <UniqueIdentifier>{a8d921bc-df5e-4183-84f9-ee3da26143a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\DataStructure\Array">
+      <UniqueIdentifier>{1dfb846a-9bb2-408d-a5cf-45ec3cecd0c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\DataStructure\String">
+      <UniqueIdentifier>{93afba91-f416-4281-a8c8-47db05ba74a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\DataStructure\ListMap">
+      <UniqueIdentifier>{360d6194-9d0d-4c8a-97f2-59f5a26c1dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\DataStructure\BinTree">
+      <UniqueIdentifier>{8373beea-0e90-444d-b3c0-7998a6a87513}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -28,19 +40,22 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="solution3.cpp">
-      <Filter>源文件\DataStructure</Filter>
+      <Filter>源文件\DataStructure\Array</Filter>
     </ClCompile>
     <ClCompile Include="solution4.cpp">
-      <Filter>源文件\DataStructure</Filter>
+      <Filter>源文件\DataStructure\Array</Filter>
     </ClCompile>
     <ClCompile Include="solution5.cpp">
-      <Filter>源文件\DataStructure</Filter>
+      <Filter>源文件\DataStructure\String</Filter>
     </ClCompile>
     <ClCompile Include="solution6.cpp">
-      <Filter>源文件\DataStructure</Filter>
+      <Filter>源文件\DataStructure\ListMap</Filter>
     </ClCompile>
     <ClCompile Include="solution7.cpp">
-      <Filter>源文件\DataStructure</Filter>
+      <Filter>源文件\DataStructure\BinTree</Filter>
+    </ClCompile>
+    <ClCompile Include="solution8.cpp">
+      <Filter>源文件\DataStructure\BinTree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

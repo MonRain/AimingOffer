@@ -12,69 +12,16 @@
 #include <stack>
 #include <vector>
 #include <string>
-// 先实现二叉树的3种遍历的6种实现方法——不实现重构方法 实现了遍历也没办法测试
-// 基本思路：
-// 1. 递归 
-// 2. 循环：利用栈
-
-// 递归方式
-using namespace std;
-
-std::vector<int>* preOrderRecursion(BinTreeNode* pHead, std::vector<int>* vec) {
-
-	int counter = 0;
-	while (pHead != nullptr)
-	{
-		vec->push_back(pHead->m_nValue);
-		preOrderRecursion(pHead->m_pRight, vec);
-		preOrderRecursion(pHead->m_pLeft, vec);
-	}
-	
-	return vec;
-}
-std::vector<int>* inOrderRecursion(BinTreeNode* pHead, std::vector<int>* vec) {
-
-	int counter = 0;
-	while (pHead != nullptr)
-	{
-		preOrderRecursion(pHead->m_pRight, vec);
-		vec->push_back(pHead->m_nValue);
-		preOrderRecursion(pHead->m_pLeft, vec);
-	}
-
-	return vec;
-}
-int* postOrderRecursion(BinTreeNode* pHead) {
-	return nullptr;
-}
-
-int* boardOrderRecursion(BinTreeNode* pHead) {
-	return nullptr;
-}
-
-int* preOrderLoop(BinTreeNode* pHead) {
-	return nullptr;
-}
-int* inOrderLoop(BinTreeNode* pHead) {
-	return nullptr;
-}
-int* postOrderLoop(BinTreeNode* pHead) {
-	return nullptr;
-}
-
-int* boardOrderLoop(BinTreeNode* pHead) {
-	return nullptr;
-}
 /* 面试题7：重建二叉树
 * 输入前序遍历 中序遍历，重建二叉树。输出头节点
 * 假设：前序 中序遍历中都不包含重复的数字
 */
 
-BinTreeNode* reBuildBinTree(int forward[], int middle[], int length) {
+BinTreeNode_binP* reBuildBinTree(int forward[], int middle[], int length) {
 	if (length <= 0)
 		return nullptr;
 
-	BinTreeNode* pHead = new BinTreeNode();
+	BinTreeNode_binP* pHead = new BinTreeNode_binP();
 
 	if (length == 1) {
 		pHead->m_nValue = forward[0];
@@ -137,7 +84,7 @@ BinTreeNode* reBuildBinTree(int forward[], int middle[], int length) {
 
 
 // 打印二叉树 来自Leetcode题解
-int getDepth(BinTreeNode* root) {
+int getDepth(BinTreeNode_binP* root) {
 	int mLen = -1;
 	//记最深为-1，只要有一个比-1大的深度，就给他！
 	if (!root) {
@@ -147,7 +94,7 @@ int getDepth(BinTreeNode* root) {
 	//加一是因为人家有值，更进一步，就得加一！
 }
 
-void write(vector<vector<string>>& print, BinTreeNode* root, int nodeI, int left, int right) {
+void write(vector<vector<string>>& print, BinTreeNode_binP* root, int nodeI, int left, int right) {
 	//深度优先的遍历，把打印表一直带着，把树节点一直带着，然后这是：当前root的行数，left和right是以root为根的时候它
 	//的打印表的左右范围，以便确定下一个左右孩子的那个中间位置！
 	if (!root) {
@@ -168,7 +115,7 @@ void write(vector<vector<string>>& print, BinTreeNode* root, int nodeI, int left
 	// 以4行的数，0~14为例   (0+14)/2 ~ 14  ==  7 ~ 14,
 }
 
-vector<vector<string>> printTree(BinTreeNode* root) {
+vector<vector<string>> printTree(BinTreeNode_binP* root) {
 	int row = getDepth(root);
 	int col = pow(2, row) - 1;
 	vector<vector<string>> print(row, vector<string>(col, ""));

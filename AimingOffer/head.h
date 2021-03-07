@@ -48,15 +48,25 @@ void printListRevRecursively(ListNode**);
 void findDelNode(ListNode** pHead, int value);
 
 // solution7
-struct BinTreeNode
+struct BinTreeNode_binP
 {
-	BinTreeNode* m_pLeft;
-	BinTreeNode* m_pRight;
+	BinTreeNode_binP* m_pLeft;
+	BinTreeNode_binP* m_pRight;
 
 	int m_nValue;
 };
-BinTreeNode* reBuildBinTree(int forward[], int middle[], int length);
-std::vector<int>* preOrderRecursion(BinTreeNode* pHead, std::vector<int>* vec);
-vector<vector<string>> printTree(BinTreeNode* root);
+BinTreeNode_binP* reBuildBinTree(int forward[], int middle[], int length);
+
+// solution8
+struct BinTreeNode_triP {
+	BinTreeNode_triP* m_pFather;
+	BinTreeNode_triP* m_pLeft;
+	BinTreeNode_triP* m_pRight;
+
+	int m_nValue;
+};
+
 // utils
 void printArr(int arr[], int num_arr);
+vector<vector<string>> printTree(BinTreeNode_binP* root);
+std::vector<int>* preOrderRecursion(BinTreeNode_binP* pHead, std::vector<int>* vec);
